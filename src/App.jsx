@@ -1,5 +1,4 @@
 import React from 'react'
-import bgImage from '../public/bg.png'
 import { Route, Routes } from 'react-router-dom'
 import LandingPage from "../src/pages/LandingPage"
 import Contact from "../src/pages/Contact"

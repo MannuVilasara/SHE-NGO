@@ -1,2 +1,14 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+.montagu-slab {
+    font-family: "Montagu Slab", serif;
+    font-optical-sizing: auto;
+    font-weight:2px;
+    font-style: normal;
+  }
+
+p{
+    font-style: "montagu Slab";
+}
