@@ -1,15 +1,15 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
 .montagu-slab {
     font-family: "Montagu Slab", serif;
     font-optical-sizing: auto;
-    font-weight:2px;
+    font-weight: 2px;
     font-style: normal;
-  }
-
-.exit:hover + .back{
-  display:flex;
-  cursor:pointer;
 }
+
+.exit:hover + .back {
+    display: flex;
+    cursor: pointer;
+}
+
