@@ -9,6 +9,7 @@
     font-style: normal;
   }
 
-p{
-    font-style: "montagu Slab";
+.exit:hover + .back{
+  display:flex;
+  cursor:pointer;
 }
