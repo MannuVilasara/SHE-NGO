@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import bgImage from '../../public/bg.png'
-import HomeMain from '../components/homeMain'
+import Main from '../components/DiscoverMain'
 
 
 const Discover = () => {
   return (
     <div style={{ backgroundImage: `url(${bgImage})` }} className='bg-cover bg-center w-full min-h-screen'>
       <Navbar/>
-      <HomeMain/>
+      <Main/>
     </div>
   )
 }

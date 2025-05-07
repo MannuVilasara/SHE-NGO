@@ -5,6 +5,7 @@ import Contact from "../src/pages/Contact"
 import Discover from "../src/pages/Discover"
 import Home from "../src/pages/Home"
 import Projects from "../src/pages/Projects"
+import { Toaster } from 'react-hot-toast'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/projects" element={<Projects/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
       </Routes>
+      <Toaster/>
     </div>
   )
 }
