@@ -91,7 +91,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className=" menu menu-horizontal px-1 flex gap-10 montagu-slab text-xl font-bold">
+            <ul className=" menu menu-horizontal px-1 flex gap-6 montagu-slab text-xl font-bold">
               <li>
                 <NavLink
                   to="/home"
