@@ -13,3 +13,8 @@
     cursor: pointer;
 }
 
+.gif3:hover + .upper-gif3{
+    display: flex;
+    cursor: pointer;
+    z-index: 99;
+}

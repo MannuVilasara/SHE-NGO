@@ -1,14 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import bgImage from '../../public/bg.png'
-import HomeMain from '../components/homeMain'
 
 
 const Home = () => {
   return (
     <div style={{ backgroundImage: `url(${bgImage})` }} className='bg-cover bg-center w-full min-h-screen'>
       <Navbar/>
-      <HomeMain/>
     </div>
   )
 }
