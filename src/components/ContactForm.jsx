@@ -7,7 +7,7 @@ const contactForm = () => {
         toast.success("MESSAGE SENT SCUCCESSFULLY");
     }
     return (
-        <div className='px-10 min-h-[80vh] w-full  flex items-center justify-center'>
+        <div className='px-10 min-h-[80vh] w-full  flex items-center justify-center pt-36'>
             <div className='w-[80vw] lg:h-[80%] h-[85%] flex flex-col lg:flex-row gap-10 items-center justify-center'>
                 <div className='w-1/2 h-[100%]  flex items-center justify-center flex-col gap-3'>
                 <div>

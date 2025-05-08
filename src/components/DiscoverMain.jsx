@@ -4,7 +4,7 @@ import gif1 from "../../public/gif1.gif";
 import gif2 from "../../public/gif2.gif";
 import gif3 from "../../public/gif3.gif";
 import Slider from "react-slick";
-import Members from '../../src/Members.json';
+import Members from '../../src/data/Members.json';
 import Card from './Card';
 import "slick-carousel/slick/slick.css"; // Import slick-carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick-carousel theme CSS
@@ -47,7 +47,7 @@ const homeMain = () => {
   };
 
   return (
-    <div className='flex flex-col gap-14 md:gap-26 items-center justify-center pb-20 w-full min-h-screen'>
+    <div className='flex flex-col gap-14 md:gap-26 items-center justify-center pb-20 w-full min-h-screen pt-40'>
       <div className='flex flex-col items-center px-6 justify-center gap-12 md:gap-6 lg:gap-4'>
         <div className='md:w-2/3 md:h-1/2'>
           <img src={discover} className='home-bg brightness-200 z-1 bg-cover bg-center' alt="Discover" />
@@ -81,14 +81,16 @@ const homeMain = () => {
             Project She was founded by <span className='inline-block text-white'>Sanskriti Mohan</span> and is a dedicated group of changemakers, activists, educators, and volunteers united by a common purpose — to uplift and empower women across all sections of society. We believe that every woman has the right to dream, achieve, and lead a life of respect and opportunity.
           </h5>
         </div>
-        <div className=' w-[100%] md:w-[70%]  lg:w-[30%] h-[60%] ] md:h-[110%] flex-col items-center justify-center gap-10'>
+        <div className=' w-[100%] md:w-[70%]  lg:w-[30%] min-h-[60%]  md:h-[110%] flex-col items-center justify-center gap-10'>
           <h1 className='w-[100%] h-[30%] flex items-center justify-center gap-10 text-3xl tracking-tight  montagu-slab font-bold brightness-300'>
             OUR CORE MEMBERS
           </h1>
           <div className=''>
           <Slider {...settings}>
             {Members.map((item, index) => (
-              <Card key={index} member={item} />
+              <div key={index} className='px-6'>
+                <Card  member={item} />
+              </div>
             ))}
           </Slider>
           </div>

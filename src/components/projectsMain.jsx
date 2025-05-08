@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const projectsMain = () => {
     return (
-        <div className='w-full min-h-[80vh] px-6 md:px-10'>
+        <div className='w-full min-h-[80vh] px-6 md:px-10 pt-34'>
             <div className=' w-full h-[100%] flex flex-col gap-10 items-center'>
                 <div>
                     <h1 className='montagu-slab text-3xl'>OUR PROJECTS</h1>

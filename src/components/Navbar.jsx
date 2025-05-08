@@ -5,7 +5,7 @@ import { IoMdExit } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <div className="backdrop-blur-xl px-6 lg:px-10 ">
+    <div className="backdrop-blur-xl px-6 lg:px-10 fixed z-999 w-full">
       <div>
         <div className="navbar relative z-50 shadow-sm">
           <div className="navbar-start">
