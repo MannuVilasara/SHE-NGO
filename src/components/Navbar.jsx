@@ -77,8 +77,8 @@ const Navbar = () => {
                     to="/contact"
                     className={({ isActive }) =>
                       isActive
-                        ? "border-b-2 border-[#5e0000] text-xl"
-                        : "text-xl"
+                        ? "border-b-2 border-[#5e0000] text-xl brightness-250"
+                        : "text-xl brightness-175"
                     }
                   >
                     Contact Us

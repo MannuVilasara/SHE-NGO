@@ -43,27 +43,21 @@ const homeMain = () => {
 
   return (
     <div>
-      <div className='w-full h-screen overflow-hidden flex items-center justify-center opacity-100'>
-        <Slider {...settings}>
-          {data.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                backgroundImage: `url(${item.image})`,
-              }}
-              className='w-[90%] h-[90%] bg-cover bg-center no-repeat'
-            >
-              <div className='w-full h-full backdrop-blur-sm flex flex-col justify-end p-10'>
-                <h1 className='text-black text-4xl montagu-slab font-bold mb-4'>
-                  {item.title}
-                </h1>
-                <p className='text-white bg-black px-10 py-8 rounded-lg montagu-slab tracking-tight'>
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </Slider>
+      <div className='w-full h-screen overflow-hidden flex items-center justify-center opacity-100 pt-30'>
+        
+        <div style={{ backgroundImage: `url(https://images.unsplash.com/photo-1638768505959-6fc9d8c86c4b?w=600&auto=format&fit=crop&q=60)` }}
+          className='w-[90%] h-[90%] bg-cover bg-center no-repeat '>
+          <div className='w-full h-full backdrop-blur-sm flex flex-col justify-end p-2 md:p-10 pb-4'>
+            <h1 className='text-black text-4xl montagu-slab font-bold mb-4 ml-4 z-90'>
+              child rights
+            </h1>
+            <p className='text-white bg-black px-4 py-4 md:px-10 md:py-8 rounded-3xl montagu-slab tracking-tight leading-5'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, perspiciatis, voluptatum illum sed mollitia incidunt voluptates tempora, ipsum odio vel dolorum doloribus? Neque hic in voluptatem possimus vitae. Distinctio, maiores.
+            </p>
+          </div>
+        </div>
+    
+        
       </div>
     </div>
   );
