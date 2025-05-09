@@ -1,11 +1,23 @@
 import React from 'react'
 import toast from 'react-hot-toast'
+import { useForm } from "react-hook-form"
 
 const contactForm = () => {
-    const submitHandler=(e)=>{
-        e.preventDefault();
-        toast.success("MESSAGE SENT SCUCCESSFULLY");
-    }
+
+    const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => {
+    console.log(data);
+    toast.success("MESSAGE SENT SUCCESSFULLY")
+  }
+
+
+    
     return (
         <div className='px-10 min-h-[80vh] w-full  flex items-center justify-center pt-36'>
             <div className='w-[80vw] lg:h-[80%] h-[85%] flex flex-col lg:flex-row gap-10 items-center justify-center'>
@@ -22,11 +34,22 @@ const contactForm = () => {
                 </div>
                 </div>
                 <div className='lg:w-1/2 w-full brightness-100 h-[100%] bg-[#5e0000] p-10 rounded-2xl'>
-                <form onSubmit={submitHandler} className='flex flex-col gap-6 w-[100%] items-center justify-center'>
-                    <input className='px-3 py-2 w-full border-2 border-black text-white rounded-xl' type="text" placeholder="Enter your Name"/>
-                    <input className='px-3 py-2 w-full  border-2 border-black text-white rounded-xl' type="text" placeholder="Enter you Email"/>
-                    <input className='px-3 py-2 w-full border-2 border-black text-white rounded-xl' type="text" placeholder="Enter Your Phone no."/>
-                    <textarea rows={4} className=' px-3 py-2 w-full border-2 border-black text-white rounded-xl' placeholder='Enter your message'/>
+
+                <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-6 w-[100%] items-center justify-center'>
+                    <input name='name'  {...register("name", { required: true })} className='px-3 py-2 w-full border-2 border-black text-white rounded-xl' type="text" placeholder="Enter Your Name"/>
+                    
+
+
+                    <input name='email'  {...register("email", { required: true })} className='px-3 py-2 w-full  border-2 border-black text-white rounded-xl' type="text" placeholder="Enter Your Email"/>
+                    
+
+                    <input name='phone' {...register("phone", { required: true })} className='px-3 py-2 w-full border-2 border-black text-white rounded-xl' type="number" placeholder="Enter Your Phone no."/>
+
+
+                    <textarea name='message' type="text" {...register("messsage", { required: true })}rows={4} className=' px-3 py-2 w-full border-2 border-black text-white rounded-xl' placeholder='Enter Your Mssage'/>
+                    {errors.message && <span>All fields are required</span>}
+
+
                     <button  type='submit' className='px-6 py-2 border-2 bg-black text-white rounded-xl cursor-pointer'>Send Message</button>
                 </form>
                 </div>

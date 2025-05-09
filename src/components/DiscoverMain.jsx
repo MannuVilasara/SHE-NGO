@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css"; // Import slick-carousel theme CS
 const homeMain = () => {
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     autoplay: true,
     autoplaySpeed: 3000,
     infinite: true,
