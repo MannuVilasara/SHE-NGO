@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import bgImage from '../../public/bg.png'
 import { Link } from 'react-router-dom'
 import { useGSAP } from '@gsap/react'
@@ -34,21 +34,20 @@ const LandingPage = () => {
       })
   })
 
-  useGSAP(() => {
-    if (showContent) {
-      const main = document.querySelector(".main");
-      console.log(main)
-      if (main) {
-        gsap.to(".main", {
-          rotate: 0,
-          scale: 1,
-          duration: 2,
-          delay: -1,
-          ease: "Expo.easeInOut"
-        })
-      }
+  useEffect(() => {
+  if (showContent) {
+    const main = document.querySelector(".main");
+    if (main) {
+      gsap.to(".main", {
+        rotate: 0,
+        scale: 1,
+        autoAlpha: 1, 
+        duration: 1.5,
+        ease: "power3.out"
+      });
     }
-  })
+  }
+}, [showContent]);
 
 
   return (
@@ -108,7 +107,6 @@ const LandingPage = () => {
       </div>}
     </div>
   )
-
 }
 
 export default LandingPage
